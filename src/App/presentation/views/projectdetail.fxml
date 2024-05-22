@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="617.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.presentation.controllers.ProjectDetailController">
+    <children>
+        <Label layoutX="46.0" layoutY="136.0" prefHeight="37.0" prefWidth="53.0" text="ID">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <JFXTextField fx:id="ProjectID" focusColor="#009688" layoutX="117.0" layoutY="140.0" prefHeight="25.0" prefWidth="151.0" />
+        <JFXButton fx:id="btnAddTask" buttonType="RAISED" layoutX="48.0" layoutY="550.0" onAction="#AddTask" prefHeight="40.0" prefWidth="136.0" styleClass="btn-green" stylesheets="@components/css/main.css" text="Ajouter une tâche" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="15.0" />
+         </font></JFXButton>
+        <TableView fx:id="tableview" layoutX="3.0" layoutY="309.0" prefHeight="224.0" prefWidth="748.0">
+            <columns>
+                <TableColumn fx:id="TaskName" prefWidth="132.0" text="Désignation" />
+                <TableColumn fx:id="TaskTime" minWidth="0.0" prefWidth="62.0" text="Durée" />
+                <TableColumn fx:id="TaskStartDate" prefWidth="97.0" text="Début" />
+                <TableColumn fx:id="TaskEndDate" prefWidth="96.0" text="Fin" />
+                <TableColumn fx:id="TaskProgress" minWidth="6.0" onEditCommit="#onEditProgress" prefWidth="68.0" text="Etat" />
+                <TableColumn fx:id="TaskColor" minWidth="6.0" prefWidth="77.0" text="Couleur" />
+                <TableColumn fx:id="TaskDependency" minWidth="0.0" prefWidth="103.0" text="Dépendance" />
+            <TableColumn fx:id="TaskAssinged" prefWidth="112.0" text="Attribuée à" />
+            </columns>
+        </TableView>
+        <Label alignment="BOTTOM_LEFT" layoutX="396.0" layoutY="247.0" prefHeight="25.0" prefWidth="143.0" text="Temps estimé">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <JFXTextField fx:id="esti_time" editable="false" focusColor="#009688" layoutX="537.0" layoutY="247.0" prefHeight="25.0" prefWidth="151.0" />
+        <Label layoutX="46.0" layoutY="188.0" prefHeight="54.0" prefWidth="68.0" text="Début" />
+        <Label layoutX="46.0" layoutY="232.0" prefHeight="54.0" prefWidth="68.0" text="Fin" />
+        <JFXDatePicker fx:id="start_date" defaultColor="#ffc3c3" layoutX="117.0" layoutY="198.0" onAction="#startDateChanged" />
+        <JFXDatePicker fx:id="end_date" defaultColor="#ffc3c3" layoutX="117.0" layoutY="246.0" onAction="#showDays" />
+        <JFXButton fx:id="GanttChartButton" buttonType="RAISED" layoutX="564.0" layoutY="550.0" onAction="#showGanttChart" prefHeight="40.0" prefWidth="143.0" styleClass="Btn" stylesheets="@components/css/main.css" text="Afficher GANTT" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="15.0" />
+         </font></JFXButton>
+      <JFXTextField fx:id="ProjectName" focusColor="#009688" layoutX="537.0" layoutY="148.0" prefHeight="25.0" prefWidth="151.0" />
+      <Label alignment="BOTTOM_LEFT" layoutX="396.0" layoutY="148.0" prefHeight="25.0" prefWidth="124.0" text="Nom du projet">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="LoadTaskButton" buttonType="RAISED" layoutX="408.0" layoutY="550.0" onAction="#LoadTaskHandle" prefHeight="40.0" prefWidth="143.0" styleClass="Btn" stylesheets="@components/css/main.css" text="Rafraîchir" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="15.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="DeleteTaskButton" buttonType="RAISED" layoutX="193.0" layoutY="550.0" onAction="#DeleteTaskHandle" prefHeight="40.0" prefWidth="151.0" ripplerFill="#ffc3c3" styleClass="btn-red" stylesheets="@components/css/main.css" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="15.0" />
+         </font></JFXButton>
+      <Label fx:id="isidexist" layoutX="111.0" layoutY="166.0" prefHeight="17.0" prefWidth="207.0" textFill="#a80c0c" />
+      <Separator layoutX="-1.0" layoutY="88.0" prefHeight="29.0" prefWidth="748.0" />
+      <JFXButton fx:id="allproject" buttonType="RAISED" graphicTextGap="5.0" layoutX="610.0" layoutY="28.0" onAction="#allproject" prefHeight="47.0" prefWidth="124.0" ripplerFill="#170404" styleClass="Btn" stylesheets="@components/css/main.css" text="Tous les projets" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="15.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnProjectDetail" buttonType="RAISED" graphicTextGap="5.0" layoutX="551.0" layoutY="28.0" onAction="#ProjectDetail" prefHeight="47.0" prefWidth="53.0" ripplerFill="#170404" styleClass="btn-green" stylesheets="@components/css/main.css" text="+" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="invalid_date_label" alignment="CENTER" layoutX="401.0" layoutY="224.0" prefHeight="16.0" prefWidth="333.0" textAlignment="CENTER" textFill="#790000" visible="false">
+         <font>
+            <Font size="12.0" />
+         </font></Label>
+      <JFXButton fx:id="homeBackBtn" alignment="CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="31.0" layoutY="28.0" onAction="#homeBackBtnAction" prefHeight="47.0" prefWidth="124.0" styleClass="Btn" stylesheets="@components/css/main.css" text="&lt; Accueil" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" layoutX="396.0" layoutY="200.0" prefHeight="25.0" prefWidth="124.0" text="Client" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ChoiceBox fx:id="projectClient" layoutX="538.0" layoutY="202.0" prefHeight="27.0" prefWidth="151.0" />
+      <JFXTextField fx:id="ClientNameText" editable="false" focusColor="#009688" layoutX="538.0" layoutY="205.0" prefHeight="25.0" prefWidth="151.0" />
+    </children>
+</AnchorPane>

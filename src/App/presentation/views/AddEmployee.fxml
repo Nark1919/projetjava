@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="415.0" prefWidth="748.0" styleClass="main-bg" stylesheets="@components/css/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.presentation.controllers.AddEmployeeController">
+    <children>
+        <JFXButton fx:id="AddEmployeeButton" layoutX="593.0" layoutY="324.0" onAction="#AddEmployee" prefHeight="44.0" prefWidth="117.0" ripplerFill="#009688" styleClass="Btn" stylesheets="@components/css/main.css" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font></JFXButton>
+        <JFXPasswordField fx:id="employee_password" focusColor="#34274e" layoutX="184.0" layoutY="269.0" prefHeight="30.0" prefWidth="169.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </JFXPasswordField>
+        <JFXTextField fx:id="employee_name" focusColor="#34274e" layoutX="183.0" layoutY="133.0" prefHeight="30.0" prefWidth="169.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </JFXTextField>
+
+      <JFXTextField fx:id="employee_username" focusColor="#34274e" layoutX="183.0" layoutY="227.0" prefHeight="30.0" prefWidth="169.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="BOTTOM_LEFT" layoutX="55.0" layoutY="134.0" prefHeight="29.0" prefWidth="117.0" style="-fx-font-size: 16;" text="Nom" textAlignment="CENTER" />
+      <Label alignment="BOTTOM_LEFT" layoutX="55.0" layoutY="228.0" prefHeight="29.0" prefWidth="125.0" style="-fx-font-size: 16;" text="Nom d'utilisateur" textAlignment="CENTER" />
+      <Label alignment="BOTTOM_LEFT" layoutX="55.0" layoutY="270.0" prefHeight="29.0" prefWidth="117.0" style="-fx-font-size: 16;" text="Mot de passe" textAlignment="CENTER" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="306.0" layoutY="37.0" prefHeight="62.0" prefWidth="169.0" text="Ajouter un employé" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="BOTTOM_LEFT" layoutX="55.0" layoutY="310.0" prefHeight="29.0" prefWidth="117.0" style="-fx-font-size: 16;" text="Email" textAlignment="CENTER" />
+      <Label alignment="BOTTOM_LEFT" layoutX="394.0" layoutY="135.0" prefHeight="29.0" prefWidth="117.0" style="-fx-font-size: 16;" text="Tel" textAlignment="CENTER" />
+      <Label alignment="BOTTOM_LEFT" layoutX="391.0" layoutY="220.0" prefHeight="29.0" prefWidth="117.0" style="-fx-font-size: 16;" text="Département" textAlignment="CENTER" />
+      <JFXTextField fx:id="employee_email" focusColor="#0c979c" layoutX="183.0" layoutY="309.0" prefHeight="30.0" prefWidth="169.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="employee_contact" focusColor="#0c979c" layoutX="519.0" layoutY="134.0" prefHeight="30.0" prefWidth="169.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="employee_department" focusColor="#34274e" layoutX="520.0" layoutY="219.0" prefHeight="30.0" prefWidth="169.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutX="294.0" layoutY="83.0" prefWidth="200.0" style="-fx-background-color: gray;" />
+      <Label alignment="BOTTOM_LEFT" layoutX="391.0" layoutY="264.0" prefHeight="29.0" prefWidth="117.0" style="-fx-font-size: 16;" text="Désignation" textAlignment="CENTER" />
+      <JFXTextField fx:id="employee_designation" focusColor="#34274e" layoutX="520.0" layoutY="263.0" prefHeight="30.0" prefWidth="169.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="BOTTOM_LEFT" layoutX="391.0" layoutY="180.0" prefHeight="29.0" prefWidth="104.0" style="-fx-font-size: 16;" text="Sexe" textAlignment="CENTER" />
+      <JFXComboBox fx:id="boxEmpGender" focusColor="#34274e" layoutX="520.0" layoutY="180.0" prefHeight="29.0" prefWidth="169.0" promptText="Choisir le sexe" style="-jfx-label-float: false;" unFocusColor="#8a8a8a" visibleRowCount="2" />
+      <JFXTextField fx:id="employee_id" editable="false" focusColor="#34274e" layoutX="183.0" layoutY="182.0" prefHeight="30.0" prefWidth="169.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="BOTTOM_LEFT" layoutX="57.0" layoutY="183.0" prefHeight="29.0" prefWidth="117.0" style="-fx-font-size: 16;" text="Id" textAlignment="CENTER" />
+      <Label fx:id="errorMsg" alignment="CENTER" layoutX="159.0" layoutY="99.0" prefHeight="27.0" prefWidth="464.0" textFill="#9e2222">
+         <font>
+            <Font name="Gill Sans MT" size="15.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+.Btn {
+    -fx-background-color: #7A8D9B;
+}
+
+.logout-Btn {
+    -fx-background-color: #E3D4D0;
+}
+
+.main-bg {
+    -fx-background-color: linear-gradient(from 50% 25% to 100% 100%, #EED0C6, #DABEB6);
+}
+
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-arrow,
+.table-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+
+.table-view .table-cell {
+    -fx-font-size: 14px;
+    -fx-font-family: "Gill Sans MT" !important;
+
+}
+
+.table-view .table-column {
+    -fx-alignment:center;
+    -fx-font-family: Lato;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #F9BDBD;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.radio-Btn{
+    -jfx-selected-color: #7A8D9B;
+    -jfx-unselected-color: #7A8D9B;
+    -jfx-focus-color: #7A8D9B;
+}
+.text-color{
+    -fx-text-fill: #7A8D9B;
+    -jfx-highlight-text-fill: #7A8D9B;
+}
+.btn-green{
+    -fx-background-color: #08b474;
+}
+.btn-red{
+    -fx-background-color: #d6162d;
+}
+
